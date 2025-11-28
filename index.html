@@ -28,9 +28,24 @@
 </head>
 <body>
   <div class="container">
-    <!-- Replaced GIF with requested external URL -->
     <img class="sushi" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc282NzRodGNrYXZqOGZ4eTl5ampkb213N2JiY3F4MmNwcXlnaXE5dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ru6AkphoLHiXm/giphy.gif" alt="Sushi GIF">
-    <div class="caption">god jul nan<br>/pete</div>
+    <div class="caption">god jul nan<br>/pete)</div>
   </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      fetch("https://formspree.io/f/meobvkva", {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          time: new Date().toLocaleString(),
+          page: window.location.href,
+          visitor: navigator.userAgent
+        })
+      });
+    });
+  </script>
 </body>
 </html>
